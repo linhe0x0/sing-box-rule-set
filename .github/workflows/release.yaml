@@ -1,0 +1,49 @@
+name: Build sing-box rule-set
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 18 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl git
+
+      - name: Set system DNS
+        run: |
+          sudo sh -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
+          sudo sh -c 'echo "nameserver 1.1.1.1" >> /etc/resolv.conf'
+
+      - name: Install sing-box
+        run: |
+          VERSION=$(curl -s https://api.github.com/repos/SagerNet/sing-box/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/' | sed 's/v//')
+          curl -fsSL -o sing-box.deb "https://github.com/SagerNet/sing-box/releases/download/v${VERSION}/sing-box_${VERSION}_linux_amd64.deb"
+          sudo dpkg -i sing-box.deb || sudo apt-get install -f -y
+          rm -f sing-box.deb
+          sing-box version
+
+      - name: Fetch upstream sources
+        run: bash scripts/fetch.sh
+
+      - name: Normalize rules
+        run: bash scripts/normalize.sh
+
+      - name: Compile rule-set
+        run: bash scripts/compile.sh
+
+      - name: Prepare publish
+        run: bash scripts/publish.sh
+
+      - name: Publish to release branch
+        run: bash scripts/release.sh
