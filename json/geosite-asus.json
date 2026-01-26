@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["asus.com","asus.com.cn","asuscloud.com","asuswebstorage.com"]}
+  ]
+}

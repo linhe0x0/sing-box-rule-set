@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["dandan818.com","dandanvoice.com","maimai.cn","taou.com","tieba.baidu.com","tieba.com","zsxq.com"]}
+  ]
+}

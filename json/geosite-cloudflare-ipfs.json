@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["cf-ipfs.com","cloudflare-ipfs.com"]}
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["csis.org"],"domain": ["csis-prod.s3.amazonaws.com"]}
+  ]
+}
