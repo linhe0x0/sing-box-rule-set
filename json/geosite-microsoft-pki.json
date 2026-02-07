@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["msocsp.com"],"domain": ["crl.microsoft.com","mscrl.microsoft.com","ocsp.microsoft.com","oneocsp.microsoft.com","www.microsoft.com"]}
+  ]
+}

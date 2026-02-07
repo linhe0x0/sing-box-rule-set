@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["fontbook.com","fontshop.com","fstopimages.com"],"domain": ["fontshop-prod-responsive-images.s3.amazonaws.com"]}
+  ]
+}

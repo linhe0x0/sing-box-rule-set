@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["zb.app","zb.com","zb.io","zb.live"]}
+  ]
+}
