@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["edx-cdn.org","edx.org"]}
+  ]
+}

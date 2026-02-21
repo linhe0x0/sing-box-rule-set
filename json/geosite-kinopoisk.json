@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["kinopoisk-ru.clstorage.net","kinopoisk.ru"]}
+  ]
+}

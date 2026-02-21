@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["bintray.com","jfrog.com","jfrog.org"],"domain": ["d29vzk4ow07wi7.cloudfront.net"]}
+  ]
+}

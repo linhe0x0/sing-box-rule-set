@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["botstop.com","hcaptcha.com","hcaptchastatus.com"]}
+  ]
+}

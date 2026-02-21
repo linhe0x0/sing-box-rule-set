@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["cmpassport.com"],"domain": ["enrichgw.10010.com","hap.10010.com","hs.wosms.cn","id6.me","opencloud.wostore.cn"],"domain_regex": ["^nis.+\\.10010\\.com$"]}
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "rules": [
+    {"domain_suffix": ["beckyroom.com","ke.com","lianjia.com","ljcdn.com"]}
+  ]
+}
